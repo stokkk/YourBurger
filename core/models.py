@@ -36,7 +36,6 @@ class Promotion(models.Model):
     image = models.ImageField(verbose_name="Превью акции")
 
 
-
 class Product(models.Model):
     """
     Модель товара

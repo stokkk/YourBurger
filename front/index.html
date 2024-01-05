@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../front/css/main.css">
+    <title>Ваш бургер</title>
+
+    <script src="js/click_events.js"></script>
+</head>
+<body>
+    <div class="main__wrapper">
+        <div class="container">
+            <div class="header__wrapp">
+                <div class="top__header">
+                    <div class="work__time">
+                        <div class="span__block"><span class="title__span">ПН - ПТ </span><span>9:00 - 19:00</span></div>
+                        <div class="span__block"><span class="title__span">СБ - ВС </span><span>10:00 - 18:00</span></div></div>
+                    <div class="contact__links">
+                        <div class="phone__number">+375(29)234-87-28</div>
+                        <div class="instagram__link"><div class="link__wrapp"><img src="img/telegram.svg" alt=""></div></div>
+                        <div class="vk__link"><div class="link__wrapp"><img src="img/vk.svg" alt=""></div></div>
+                    </div>
+                </div>
+
+                <div class="header">
+                    <div class="menu__bar">
+                        <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="Вашбургер"></a></div>
+                        <div class="catalog__wrapp">
+                            <div class="catalog" onblur="catalog_onblur(this);"> 
+                                <div class="catalog__title"  onclick="catalog_onclick(this);">
+                                    <span>Каталог</span> 
+                                    <img src="img/arrow.svg" alt="">
+                                </div>
+                                <div>
+                                    <div class="catalog__list">
+                                        <a href=""><span>Бургеры</span> <img src="img/categories/burger.png" alt=""></a>
+                                        <a href=""><span>Роллы</span> <img src="img/categories/rolli.png" alt=""></a>
+                                        <a href=""><span>Хот-доги</span> <img src="img/categories/hotdog.png" alt=""></a>
+                                        <a href=""><span>Закуски</span> <img src="img/categories/zakuski.png" alt=""></a>
+                                        <a href=""><span>Напитки</span> <img src="img/categories/coctails.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <form action="#">
+                                <input type="search" name="search" id="">
+                                <button type="submit"><img src="img/search.svg" alt=""></button>
+                            </form>
+                        </div>
+                        <div class="contacts__block"><a href="contacts.html">Контакты</a></div>
+                    </div>
+                    <div class="profile__bar">
+                        <div class="total__cost">18.75 BYN</div>
+                        <div class="cart"><a href="/cart"><img src="img/cart.svg" alt=""></a></div>
+                        <div class="logout"><a href="/logout"><img src="img/logout.svg" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
