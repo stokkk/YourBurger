@@ -23,6 +23,13 @@
 }
 
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+
 
 /* ----------------------------------   CSS   ---------------------------------- */
 
@@ -134,14 +141,43 @@ body {
     background: #D82626;
 }
 
+.cart:hover .cart__count {
+    background-color: #1C1C1C;
+    
+}
+
 .cart img, .logout img {
     padding: 18px;
 }
+
+.cart {
+    position: relative;
+
+}
+
+.cart .cart__count{
+    position: absolute;
+    right:-5px;
+    top:-10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 80px;
+    background: #D82626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+
+/* ****** CATALOG MENU BAR STYLES ****** */
 
 .catalog {
     width: 256px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .catalog__title {
@@ -205,4 +241,56 @@ body {
     width: 158px;
 }
 
+
+/* ********* SEARCH STYLES ********* */
+
+.search {
+    width: 432px;
+    height: 60px;
+    border-radius: 60px;
+    border: 1px solid #1C1C1C;
+    display: flex;
+    align-items: center;
+}
+
+.search form {
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.search input {
+    height: 100%;
+    width: 80%;
+    background-color: #101010;
+    border: none;
+    color: #fff;
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 18px */
+    letter-spacing: 0.9px;
+}
+
+.search input:focus {
+    outline: none !important;
+}
+
+.search button {
+    background-color: #101010;
+    border: none;
+}
+
+
+.contacts__block a {
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    color: #686868;
+    text-decoration: none;
+    padding: 24px 32px;
+}
 
