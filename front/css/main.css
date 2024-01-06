@@ -56,6 +56,12 @@ body {
     padding: 32px 0 16px;
 }
 
+@media screen and (max-width: 850px) {
+    .top__header {
+        display: none !important;
+    }
+}
+
 .work__time {
     font-family: 'Inter';
     font-size: 18px;
@@ -103,7 +109,113 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 16px;
 }
+
+.burger__menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .burger__menu {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background-color:  #1C1C1C;
+        position: relative;
+    }
+
+
+    .burger__menu::before,
+    .burger__menu::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        left: 25%;
+    }
+
+    .burger__menu::before {
+        top: 18px;
+    }
+
+    .burger__menu::after {
+        bottom: 18px;
+    }
+
+    .burger__menu span {
+        position: absolute;
+        background-color: #fff;
+        left: 25%;
+        width: 50%;
+        height: 3px;
+        top: 29px;
+    }
+
+
+    .burger__active .burger__off .search {
+        display: none !important;
+    }
+
+    .burger__active .burger__off .catalog__wrapp {
+        display: none !important;
+    }
+    .burger__active .burger__off .contacts__block {
+        display: none !important;    
+    }
+
+    .top__burger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .burger__active {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .burger__active .menu__bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .burger__active .catalog__wrapp {
+        width: 100%;
+    }
+
+    .burger__active .catalog {
+        width: 100%;
+    }
+
+    .burger__active .catalog__title {
+        list-style-type: none;
+        background-color: #101010 !important;
+        color: #fff;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .burger__active > div {
+        width: 100%;
+    }
+
+    .burger__active .catalog__list {
+        position: relative !important;
+    }
+
+
+}
+
 
 .menu__bar {
     display: flex;
@@ -111,70 +223,9 @@ body {
     align-items: center;
 }
 
-.profile__bar {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.total__cost {
-    color: #FFF;
-    font-family: 'Bebas Neue';
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 18px */
-    letter-spacing: 0.9px;
-}
-
-.logo img {
-    width: 101px;
-    height: 80px;
-}
-
-.cart, .logout {
-    border-radius: 60px;
-    background: #1C1C1C;
-}
-
-.cart:hover, .logout:hover {
-    background: #D82626;
-}
-
-.cart:hover .cart__count {
-    background-color: #1C1C1C;
-    
-}
-
-.cart img, .logout img {
-    padding: 18px;
-}
-
-.cart {
-    position: relative;
-
-}
-
-.cart .cart__count{
-    position: absolute;
-    right:-5px;
-    top:-10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 80px;
-    background: #D82626;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-
-
 /* ****** CATALOG MENU BAR STYLES ****** */
 
 .catalog {
-    width: 256px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -292,5 +343,72 @@ body {
     color: #686868;
     text-decoration: none;
     padding: 24px 32px;
+}
+
+
+/* ****** PROFILE MENU BAR ****** */
+
+
+.profile__bar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.total__cost {
+    color: #FFF;
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 18px */
+    letter-spacing: 0.9px;
+}
+
+@media screen and (max-width: 1202px) {
+    .total__cost {
+        display: none;
+    }
+}
+
+.logo img {
+    width: 101px;
+    height: 80px;
+}
+
+.cart, .logout {
+    border-radius: 60px;
+    background: #1C1C1C;
+}
+
+.cart:hover, .logout:hover {
+    background: #D82626;
+}
+
+.cart:hover .cart__count {
+    background-color: #1C1C1C;
+    
+}
+
+.cart img, .logout img {
+    padding: 18px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart .cart__count{
+    position: absolute;
+    right:-5px;
+    top:-10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 80px;
+    background: #D82626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
 

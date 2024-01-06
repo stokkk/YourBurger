@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="../front/css/main.css">
     <title>Ваш бургер</title>
 
-    <script src="js/click_events.js"></script>
+
 </head>
 <body>
     <div class="main__wrapper">
@@ -23,7 +23,10 @@
                     </div>
                 </div>
 
-                <div class="header">
+                <div id="header" class="header">
+                    <div class="burger__menu" onclick="burgerOnOff(this);">
+                        <span></span>
+                    </div>
                     <div class="menu__bar">
                         <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="Вашбургер"></a></div>
                         <div class="catalog__wrapp">
@@ -60,5 +63,9 @@
             </div>
         </div>
     </div>
+
+    <script src="js/click_events.js"></script>
+    <script src="js/adaptive.js"></script>
+
 </body>
 </html>
