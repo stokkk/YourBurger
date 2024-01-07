@@ -31,7 +31,6 @@ function activateBurgerMenu(header) {
     //                )
     burgerMenu = header.getElementsByClassName('burger__menu')[0];
     menubar = header.getElementsByClassName('menu__bar')[0];
-    menubar.classList.remove
     logo = menubar.getElementsByClassName('logo')[0];
     profileBar = header.getElementsByClassName('profile__bar')[0];
     
@@ -42,9 +41,21 @@ function activateBurgerMenu(header) {
         topBurger.appendChild(e);
     }) 
     header.insertBefore(topBurger, menubar);
-    console.log(topBurger);
+    menubarList = menubar.children; // спискок потомков
+    menubar.insertBefore(menubarList[1], menubarList[0]); // замена местами поиска товаров и каталога
 }
 
 function deactivateBurgerMenu(header) {
+    var topBurger = header.getElementsByClassName("top__burger")[0];
+    var burgerMenu = topBurger.getElementsByClassName("burger__menu")[0];
+    var logo = topBurger.getElementsByClassName("logo")[0];
+    var profileBar = topBurger.getElementsByClassName("profile__bar")[0];
+    var menubar = header.getElementsByClassName("menu__bar")[0];
 
+    var menubarList = menubar.children;
+    menubar.insertBefore(menubarList[1], menubarList[0]);
+    menubar.insertBefore(logo, menubarList[0]);
+    header.insertBefore(burgerMenu, topBurger);
+    header.appendChild(profileBar);
+    topBurger.remove();
 }
